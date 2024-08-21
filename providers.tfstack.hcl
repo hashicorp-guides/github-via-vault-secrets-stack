@@ -9,7 +9,7 @@ required_providers {
 
   hcp = {
     source  = "hashicorp/hcp"
-    version = "~> 0.79.0"
+    version = "~> 0.95.0"
   }
 }
 
@@ -17,7 +17,7 @@ provider "hcp" "this" {
   config {
     workload_identity {
       resource_name = var.workload_idp_name
-      token_file    = var.identity_token_file
+      token         = var.identity_token
     }
   }
 }
